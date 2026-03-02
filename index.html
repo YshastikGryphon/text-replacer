@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Убрать висячие строки</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="content">
+        <h1 class="content__title">
+          Убрать висячие строки
+        </h1>
+        <p class="content__desc">
+          Убирает "висячие" строки и применяет другие правила
+        </p>
+        <div class="texts">
+          <div class="texts-item" id="source">
+            <h2 class="texts-item__name">Оригинальный текст</h2>
+            <textarea class="texts-item__input" name="text-source" style="height:260px" placeholder="Введите текст для конвертации"></textarea>
+          </div>
+          <div class="texts-item" id="result">
+            <h2 class="texts-item__name">Новый текст</h2>
+            <textarea class="texts-item__input" name="text-result" style="resize:none;"></textarea>
+          </div>
+          <div class="texts-item" id="resultHTML">
+            <h2 class="texts-item__name">Новый HTML</h2>
+            <textarea class="texts-item__input" name="text-result" style="resize:none;"></textarea>
+          </div>
+          <div class="texts-item" id="breakdown">
+            <h2 class="texts-item__name">Разбор текста</h2>
+            <p class="texts-item__desc">
+              Зеленый - пробелы без отступа <br>
+              Желтый - отключение переноса через nobr
+            </p>
+            <div class="texts-item__input"></div>
+          </div>
+        </div>
+
+        <div class="rules">
+          <h1 class="rules__title">
+            Правила
+          </h1>
+          <div class="rules-update">
+            <div class="rules-update-item" id="">
+              <h2 class="rules-update-item__name">Пробел без переноса</h2>
+              <div class="rules-update-item__row">
+                <input class="rules-update-item__input" id="rule-add-nbsp" type="text">
+                <button class="rules-update-item__submit" id="add-rule-nbsp">Добавить</button>
+              </div>
+              
+              <div class="rules-update-item__list" id="nbsp-list">
+              </div>
+            </div>
+            <div class="rules-update-item">
+              <h2 class="rules-update-item__name">Отключить перенос слова</h2>
+              <div class="rules-update-item__row">
+                <input class="rules-update-item__input" id="rule-add-nobr" type="text">
+                <button class="rules-update-item__submit" id="add-rule-nobr">Добавить</button>
+              </div>
+              <div class="rules-update-item__list" id="nobr-list">
+
+              </div>
+            </div>
+          </div>
+          <div class="rules-update-reset">
+            <button class="rules-update-reset-btn reset-btn">
+              Сбросить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
